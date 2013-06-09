@@ -1,0 +1,53 @@
+--- deutsche-gesellschaft-fur-psychologie.csl	2013-06-09 07:21:50.000000000 +0200
++++ daswah-hszg.csl	2013-06-09 09:23:39.000000000 +0200
+@@ -1,18 +1,23 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<style xmlns="http://purl.org/net/xbiblio/csl" class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="de-DE">
++<style class="in-text" version="1.0" and="text" demote-non-dropping-particle="sort-only" default-locale="de-DE" xmlns="http://purl.org/net/xbiblio/csl">
++<!-- This style was edited with the Visual CSL Editor (http://editor.citationstyles.org/visualEditor/) -->
+   <info>
+-    <title>Deutsche Gesellschaft für Psychologie (German)</title>
+-    <id>http://www.zotero.org/styles/deutsche-gesellschaft-fur-psychologie</id>
+-    <link href="http://www.zotero.org/styles/deutsche-gesellschaft-fur-psychologie" rel="self"/>
++    <title>HSZG Daswa after Deutsche Gesellschaft für Psychologie (German)</title>
++    <id>http://www.zotero.org/styles/hszg-daswa-after-deutsche-gesellschaft-fur-psychologie-german</id>
++    <link href="http://www.zotero.org/styles/hszg-daswa-after-deutsche-gesellschaft-fur-psychologie-german" rel="self"/>
+     <link href="http://www.psychologie.uni-bonn.de/studium/richtlinien-zur-manuskriptgestaltung" rel="documentation"/>
+     <link href="https://github.com/citation-style-language/styles/pull/432" rel="documentation"/>
+     <author>
+       <name>Daniel Hirsbrunner</name>
+       <email>dhirsbrunner@gmx.ch</email>
+     </author>
++    <contributor>
++      <email>sebastian@kurfuerst.eu</email>
++      <name>Sebastian Kurfürst</name>
++    </contributor>
+     <category citation-format="author-date"/>
+     <category field="psychology"/>
+-    <updated>2013-04-09T02:57:19+00:00</updated>
++    <updated>2013-06-09T05:56:09+00:00</updated>
+     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
+   </info>
+   <locale xml:lang="de">
+@@ -55,7 +60,7 @@
+   </macro>
+   <macro name="author-short">
+     <names variable="author">
+-      <name form="short" and="symbol" delimiter=", " initialize-with=". " delimiter-precedes-last="never"/>
++      <name form="short" and="symbol" delimiter-precedes-last="never" et-al-min="18" et-al-use-first="19" et-al-subsequent-min="3" et-al-subsequent-use-first="1" initialize-with=". "/>
+       <substitute>
+         <names variable="editor"/>
+         <names variable="translator"/>
+@@ -272,8 +277,10 @@
+     </sort>
+     <layout prefix="(" suffix=")" delimiter="; ">
+       <group delimiter=", ">
+-        <text macro="author-short"/>
+-        <text macro="issued-year"/>
++        <group delimiter=" ">
++          <text macro="author-short"/>
++          <text macro="issued-year"/>
++        </group>
+         <text macro="citation-locator"/>
+       </group>
+     </layout>
